@@ -5,6 +5,8 @@ module.exports = function (context, myBlob) {
     context.log("Full blob path:", context.bindingData.blobTrigger);
     context.log(" Url", context.bindingData.name);
     //
+    //  Added a not to see if git works
+    //  
     const subscriptionKey = '4287cca65e4446d0a360841265095710';
     const uriBase =
     'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
