@@ -4,15 +4,10 @@ module.exports = function (context, myBlob) {
     context.log("JavaScript blob trigger function processed blob \n Name:", context.bindingData.name, "\n Blob Size:", myBlob.length, "Bytes");
     context.log("Full blob path:", context.bindingData.blobTrigger);
     context.log(" Url", context.bindingData.name);
-    //
-    //  Added a not to see if git works
-    //  
-    //const subscriptionKey = '4287cca65e4446d0a360841265095710';
     const subscriptionKey = process.env.CogServiceKey ;
     const uriBase =
     'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
      const imageUrl = context.bindingData.uri;
-    //
      const params = {
     'visualFeatures' : 'categories,tags,description,faces',
      'details': '',
@@ -40,9 +35,6 @@ module.exports = function (context, myBlob) {
     //
     request(options, function(err, res, body) {
         let json = JSON.parse(body);
-//        context.log("Container:", containerName);
-//        context.log("output: ", context.bindingData.name +".json");
-//        context.log("json: ", json);
             blobService.createBlockBlobFromText(containerName,context.bindingData.name +".json", body, function(error, result, response) {
                 if (!error) {
                 // file uploaded
