@@ -40,13 +40,13 @@ module.exports = function (context, myBlob) {
     //
     request(options, function(err, res, body) {
         let json = JSON.parse(body);
-        context.log("Container:", containerName);
-        context.log("output: ", context.bindingData.name +".json");
-        context.log("json: ", json);
+//        context.log("Container:", containerName);
+//        context.log("output: ", context.bindingData.name +".json");
+//        context.log("json: ", json);
             blobService.createBlockBlobFromText(containerName,context.bindingData.name +".json", body, function(error, result, response) {
                 if (!error) {
                 // file uploaded
-                context.log("Blob Created");
+                context.log("Blob Created from", context.bindingData.name );
                 }
             });
     });
