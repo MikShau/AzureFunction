@@ -7,7 +7,8 @@ module.exports = function (context, myBlob) {
     //
     //  Added a not to see if git works
     //  
-    const subscriptionKey = '4287cca65e4446d0a360841265095710';
+    //const subscriptionKey = '4287cca65e4446d0a360841265095710';
+    const subscriptionKey = process.env.CogServiceKey ;
     const uriBase =
     'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
      const imageUrl = context.bindingData.uri;
