@@ -13,7 +13,9 @@ module.exports = function (context, myBlob) {
      'details': '',
     'language': 'en'
      };
-    //    
+    //
+    //    Added a comment
+    //        
     var options = {
         method: 'POST',
         uri: 'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze',
