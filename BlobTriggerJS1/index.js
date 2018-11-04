@@ -5,13 +5,14 @@ module.exports = function (context, myBlob) {
     context.log("Full blob path:", context.bindingData.blobTrigger);
     context.log(" Url", context.bindingData.name);
     const subscriptionKey = process.env.CogServiceKey ;
-    const uriBase =
-    'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
-     const imageUrl = context.bindingData.uri;
-     const params = {
-    'visualFeatures' : 'categories,tags,description,faces',
-     'details': '',
-    'language': 'en'
+    const imageUrl = context.bindingData.uri;
+    //
+    // Parms for analyze call
+    // 
+    const params = {
+        'visualFeatures' : 'categories,tags,description,faces',
+        'details': '',
+        'language': 'en'
      };
     //
     //    Added a comment
