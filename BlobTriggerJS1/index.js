@@ -37,7 +37,8 @@ module.exports = function (context, myBlob) {
     //
     request(options, function(err, res, body) {
         let json = JSON.parse(body);
-        context.log("json.categories: ",json.categories) ;
+        json.bloburl = imageUrl ;
+        context.log("json.bloburl: ",json.bloburl) ;
             blobService.createBlockBlobFromText(containerName,context.bindingData.name +".json", body, function(error, result, response) {
                 if (!error) {
                 // file uploaded
