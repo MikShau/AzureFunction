@@ -21,14 +21,14 @@ module.exports = function (context, myBlob) {
         },
         qs: params
      };
-     context.log("Ready to issue request");
+     context.log("Ready to issue request") ;
      //
      //  issue the request
      //  
-    //request(options, function(err, res, body) {
-    //    let json = JSON.parse(body);
-    //    context.log("Face Detect: ",body) ;
-    //};
-
+    request(options, function(err, res, body) {
+        let json = JSON.parse(body);
+        context.log("Face Detect: ",body) ;
+    )};
+    context.log("js2 done");
     context.done();
 };
