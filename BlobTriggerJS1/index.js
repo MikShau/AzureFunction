@@ -18,16 +18,16 @@ module.exports = function (context, myBlob) {
     //
     //    Added a comment
     //        
-    //var options = {
-    //    method: 'POST',
-    //    uri: 'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze',
-    //    body: '{"url": ' + '"' + imageUrl + '"}',
-    //    headers: {
-    //    'Content-Type': 'application/json',
-    //    'Ocp-Apim-Subscription-Key' : subscriptionKey    
-    //    },
-    //    qs: params
-    //};
+    var options = {
+        method: 'POST',
+        uri: 'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze',
+        body: '{"url": ' + '"' + imageUrl + '"}',
+        headers: {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key' : subscriptionKey    
+        },
+        qs: params
+    };
     //
     //const storage = require('azure-storage');
     //const path = require('path');
