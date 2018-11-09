@@ -10,11 +10,11 @@ module.exports = function (context, myBlob) {
     //
     // Parms for analyze call
     // 
-    //const params = {
-    //    'visualFeatures' : 'categories,tags,description,faces',
-    //    'details': '',
-    //    'language': 'en'
-    // };
+    const params = {
+        'visualFeatures' : 'categories,tags,description,faces',
+        'details': '',
+        'language': 'en'
+     };
     //
     //    Added a comment
     //        
