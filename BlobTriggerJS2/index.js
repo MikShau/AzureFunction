@@ -13,7 +13,7 @@ module.exports = function (context, myBlob) {
      };
     var options = {
         method: 'POST',
-        uri: 'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze',
+        uri: 'https://westus.api.cognitive.microsoft.com/face/v1.0/detect',
         body: '{"url": ' + '"' + imageUrl + '"}',
         headers: {
         'Content-Type': 'application/json',
