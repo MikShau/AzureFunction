@@ -37,17 +37,19 @@ module.exports = function (context, myBlob) {
     const blobService = storage.createBlobService(process.env.AzureWebJobsStorage);
     context.log("Created blobService");
     //
-    //request(options, function(err, res, body) {
-    //    let json = JSON.parse(body);
-    //    json.bloburl = imageUrl ;
-    //    context.log("json.bloburl: ",json.bloburl) ;
-    //        blobService.createBlockBlobFromText(containerName,context.bindingData.name +".json", JSON.stringify(json), function(error, result, response) {
-    //            if (!error) {
-    //            // file uploaded
-    //            context.log("Blob Created from", context.bindingData.name );
-    //            }
-    //        });
-    //});
+    //  issue the request
+    //  
+    request(options, function(err, res, body) {
+        let json = JSON.parse(body);
+        json.bloburl = imageUrl ;
+        context.log("json.bloburl: ",json.bloburl) ;
+            blobService.createBlockBlobFromText(containerName,context.bindingData.name +".json", JSON.stringify(json), function(error, result, response) {
+                if (!error) {
+                // file uploaded
+                context.log("Blob Created from", context.bindingData.name );
+                }
+            });
+    });
     context.log("End of js1") ;
     context.done();
 };
