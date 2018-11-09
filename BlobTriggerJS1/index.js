@@ -29,13 +29,13 @@ module.exports = function (context, myBlob) {
         qs: params
     };
     //
-    //const storage = require('azure-storage');
-    //const path = require('path');
-    //const args = require('yargs').argv;
-    //var containerName = "analysis";
+    const storage = require('azure-storage');
+    const path = require('path');
+    const args = require('yargs').argv;
+    var containerName = "analysis";
     //
-    //const blobService = storage.createBlobService(process.env.AzureWebJobsStorage);
-    //context.log("Created blobService");
+    const blobService = storage.createBlobService(process.env.AzureWebJobsStorage);
+    context.log("Created blobService");
     //
     //request(options, function(err, res, body) {
     //    let json = JSON.parse(body);
