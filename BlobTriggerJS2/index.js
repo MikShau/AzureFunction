@@ -25,10 +25,10 @@ module.exports = function (context, myBlob) {
      //
      //  issue the request
      //  
-    request(options, function(err, res, body) {
-        let json = JSON.parse(body);
-        context.log("Face Detect: ",body) ;
-    )};
+    //request(options, function(err, res, body) {
+    //   let json = JSON.parse(body);
+    //    context.log("Face Detect: ",body) ;
+    //)};
     context.log("js2 done");
     context.done();
 };
