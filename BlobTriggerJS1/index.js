@@ -19,7 +19,6 @@ module.exports = function (context, myBlob) {
     //        
     var options = {
         method: 'POST',
-        uri: 'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze',
         body: '{"url": ' + '"' + imageUrl + '"}',
         headers: {
         'Content-Type': 'application/json',
